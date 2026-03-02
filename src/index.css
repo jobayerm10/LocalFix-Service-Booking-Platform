@@ -1,1 +1,26 @@
 @import "tailwindcss";
+
+/* Hide scrollbars for all browsers */
+html,
+body {
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  overflow-y: scroll; /* Always show scroll space */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Chrome, Safari and Edge */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}
+
+/* Optional: Hide scrollbars for specific elements */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
