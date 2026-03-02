@@ -40,7 +40,7 @@ const Navbar = () => {
 
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
-          className="md:hidden text-gray-700"
+          className="md:hidden text-3xl text-gray-700"
         >
           ☰
         </button>
