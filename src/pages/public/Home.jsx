@@ -39,7 +39,6 @@ const Categories = [
 
 const Home = () => {
   const [services, setServices] = useState([]);
-  // Track current image index for each category
   const [categoryImageIndices, setCategoryImageIndices] = useState(
     Categories.reduce((acc, category, idx) => {
       acc[idx] = 0;
@@ -48,88 +47,127 @@ const Home = () => {
   );
 
   useEffect(() => {
-    // Fetch featured services
     // TODO: Replace with actual API call
     setServices([]);
   }, []);
 
   return (
     <div>
-      {/* Hero Section */}
-      <section className="hero h-62.5 relative text-white overflow-hidden flex flex-col justify-center min-h-screen">
-        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
-          {/* <video
-            src={HeroVdo}
-            autoPlay
-            loop
-            muted
-            className="w-full h-full object-cover"
-          /> */}
-          <img
-            src={HeroImg}
-            alt="Hero Background"
-            className="w-full h-full object-cover object-top"
-          />
-          {/* Overlay above hero image */}
-          <div className="absolute inset-0 bg-black/30 z-10"></div>
-        </div>
-        {/* Hero content positioned at bottom */}
-        <div className="relative max-w-7xl mx-auto px-4 mt-96 text-center z-10 ">
-          <h1 className="text-5xl lg:text-9xl leading-tighter tracking-tighter text-gray-200 font-bold mb-4 drop-shadow-lg">
-            Welcome to LocalFix
+      <section className="hero relative text-white overflow-hidden flex flex-col justify-center h-screen bg-[#9da7af]">
+        <section className="box  bg-[#a9b0ba] w-screen h-screen py-10 px-20 rounded-lg shadow-md flex flex-col justify-start items-start">
+          <h1 className="text-3xl font-bold text-[#1E4376] mb-6">
+            Find Local Services
           </h1>
-          <p className="text-xl lg:text-2xl text-gray-100 font-light mb-8 drop-shadow-md">
-            Find trusted local services in your area
-          </p>
-          <Link
-            to="/services"
-            className="text-sm  px-8 py-4 border rounded-xl text-gray-100 font-semibold transition-all duration-300 hover:px-10 bg-[#ff6b00] shadow-md"
-          >
-            Browse Services
-          </Link>
-        </div>
-      </section>
-      {/* Featured Services
-      <section className="max-w-7xl mx-auto px-4 py-12">
-        <h2 className="text-3xl font-bold mb-8">Featured Services</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.length > 0 ? (
-            services.map((service) => (
-              <ServiceCard key={service.id} {...service} />
-            ))
-          ) : (
-            <p className="text-gray-500">No services available yet</p>
-          )}
-        </div>
-      </section> */}
-      {/* Categories */}
-      <section className="bg-gray-100 py-12">
-        <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Available Categories</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-            {/* Map through categories and display each as an image card */}
-            {Categories.map((category, i) => (
-              <Link
-                key={i}
-                to={`/services?category=${category.name}`}
-                className="relative h-48 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
-              >
-                {/* Category background image with auto-rotation */}
-                <img
-                  src={category.images[categoryImageIndices[i]]}
-                  alt={category.name}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-                {/* Dark overlay with category name */}
-                <div className="absolute bottom-0 bg-gray-500 hover:bg-blue-600 h-10 w-full transition-all flex items-center justify-center">
-                  <h3 className="text-xl mt-3 font-bold text-white">
-                    {category.name}
-                  </h3>
-                </div>
-              </Link>
-            ))}
+          <div className="flex flex-col md:flex-row gap-4 mb-6">
+            <select
+              className="px-4 py-3 rounded-md border border-gray-300 text-gray-700 bg-white w-full md:w-1/3"
+              defaultValue=""
+            >
+              <option value="" disabled>
+                Select Category
+              </option>
+              {Categories.map((cat, idx) => (
+                <option key={cat.name} value={cat.name}>
+                  {cat.name}
+                </option>
+              ))}
+            </select>
+            <input
+              type="text"
+              placeholder="Enter Location"
+              className="px-4 py-3 rounded-md border border-gray-300 text-gray-700 bg-white w-full md:w-1/3"
+            />
+            <button className="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold shadow-md hover:bg-blue-700 transition">
+              Search
+            </button>
           </div>
-        </div>
+
+          <div>
+            <h2 className="text-3xl text-[#2a538e] font-bold mb-6">
+              Available Categories
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {Categories.map((category, i) => (
+                <Link
+                  key={i}
+                  to={`/services?category=${category.name}`}
+                  className="relative h-48 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
+                >
+                  <img
+                    src={category.images[categoryImageIndices[i]]}
+                    alt={category.name}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute bottom-0 bg-gray-500 hover:bg-blue-600 h-10 w-full transition-all flex items-center justify-center">
+                    <h3 className="text-xl mt-3 font-bold text-white">
+                      {category.name}
+                    </h3>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white mt-10 rounded-lg shadow p-6">
+            <div className="flex items-center justify-between mb-4">
+              <h2 className="text-xl font-bold text-[#1E4376]">
+                Service Listings
+              </h2>
+              <input
+                type="text"
+                placeholder="Search"
+                className="px-3 py-2 rounded-md border border-gray-300 text-gray-700 bg-white w-40"
+              />
+            </div>
+            {/* Example service cards, replace with dynamic if needed */}
+            <div className="flex items-center gap-4 border-b pb-4 mb-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/32.jpg"
+                alt="Profile"
+                className="rounded-lg w-16 h-16 object-cover"
+              />
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-lg">Ahmed Rahman</span>
+                  <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">
+                    Electrician
+                  </span>
+                </div>
+                <div className="text-gray-500 text-sm">Dhaka, Bangladesh</div>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-yellow-500 text-xl font-bold">★</span>
+                <span className="font-semibold text-lg">4.8</span>
+              </div>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded font-semibold shadow hover:bg-blue-700">
+                Book Now
+              </button>
+            </div>
+            <div className="flex items-center gap-4">
+              <img
+                src="https://randomuser.me/api/portraits/men/33.jpg"
+                alt="Profile"
+                className="rounded-lg w-16 h-16 object-cover"
+              />
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <span className="font-bold text-lg">Samir Islam</span>
+                  <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">
+                    Plumber
+                  </span>
+                </div>
+                <div className="text-gray-500 text-sm">22 Mue Serec, Dhaka</div>
+              </div>
+              <div className="flex items-center gap-2">
+                <span className="text-yellow-500 text-xl font-bold">★</span>
+                <span className="font-semibold text-lg">4.6</span>
+              </div>
+              <button className="bg-blue-600 text-white px-4 py-2 rounded font-semibold shadow hover:bg-blue-700">
+                Book Now
+              </button>
+            </div>
+          </div>
+        </section>
       </section>
     </div>
   );
