@@ -7,7 +7,7 @@ body {
   -ms-overflow-style: none; /* IE and Edge */
   overflow-y: scroll; /* Always show scroll space */
   scroll-behavior: smooth; /* Smooth scrolling */
-  background-color: #bfc9d1;
+  /* background-color: #bfc9d1; */
 }
 
 /* Chrome, Safari and Edge */

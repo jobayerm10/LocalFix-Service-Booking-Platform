@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import ServiceCard from "../../components/shared/ServiceCard";
-import HeroImage from "../../assets/images/heroImg.png";
-
+import HeroVdo from "../../assets/images/Services.webm";
+import HeroImg from "../../assets/images/heroImg.png";
 // Hero section background image
-const HERO_IMAGE = HeroImage;
 
 // Popular service categories with multiple images and styling
 const Categories = [
@@ -36,48 +35,6 @@ const Categories = [
     ],
     color: "from-orange-600",
   },
-  {
-    name: "Tutor",
-    images: [
-      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
-    ],
-    color: "from-orange-600",
-  },
-  {
-    name: "Dentists",
-    images: [
-      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
-    ],
-    color: "from-orange-600",
-  },
-  {
-    name: "Lawyer",
-    images: [
-      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
-    ],
-    color: "from-orange-600",
-  },
-  {
-    name: "Accountants",
-    images: [
-      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
-    ],
-    color: "from-orange-600",
-  },
-  {
-    name: "Hair stylists",
-    images: [
-      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
-    ],
-    color: "from-orange-600",
-  },
-  {
-    name: "Trainers",
-    images: [
-      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
-    ],
-    color: "from-orange-600",
-  },
 ];
 
 const Home = () => {
@@ -99,20 +56,34 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="hero h-62.5 relative text-white overflow-hidden flex flex-col justify-center  bg-[#BFC9D1] min-h-screen">
+      <section className="hero h-62.5 relative text-white overflow-hidden flex flex-col justify-center min-h-screen">
+        <div className="absolute inset-0 z-0 flex items-center justify-center pointer-events-none">
+          {/* <video
+            src={HeroVdo}
+            autoPlay
+            loop
+            muted
+            className="w-full h-full object-cover"
+          /> */}
+          <img
+            src={HeroImg}
+            alt="Hero Background"
+            className="w-full h-full object-cover object-top"
+          />
+          {/* Overlay above hero image */}
+          <div className="absolute inset-0 bg-black/30 z-10"></div>
+        </div>
         {/* Hero content positioned at bottom */}
-        <div className="relative max-w-7xl mx-auto px-4 text-center z-10 ">
-          <h1 className="text-6xl text-gray-700 font-bold mb-4 drop-shadow-lg">
+        <div className="relative max-w-7xl mx-auto px-4 mt-96 text-center z-10 ">
+          <h1 className="text-9xl leading-tighter tracking-tighter text-gray-200 font-bold mb-4 drop-shadow-lg">
             Welcome to LocalFix
           </h1>
-          <p className="text-2xl mb-8 drop-shadow-md">
+          <p className="text-2xl text-gray-100 font-light mb-8 drop-shadow-md">
             Find trusted local services in your area
           </p>
           <Link
             to="/services"
-            className="text-sm md:text-base px-6 py-3 border rounded-md
-      bg-(--text-color) text-white transition-all duration-300
-      hover:px-10 shadow-md"
+            className="text-sm md:text-base px-6 py-4 border rounded-md  text-white transition-all duration-300 hover:px-10 shadow-md"
           >
             Browse Services
           </Link>
