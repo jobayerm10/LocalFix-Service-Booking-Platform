@@ -75,15 +75,15 @@ const Home = () => {
         </div>
         {/* Hero content positioned at bottom */}
         <div className="relative max-w-7xl mx-auto px-4 mt-96 text-center z-10 ">
-          <h1 className="text-9xl leading-tighter tracking-tighter text-gray-200 font-bold mb-4 drop-shadow-lg">
+          <h1 className="text-5xl lg:text-9xl leading-tighter tracking-tighter text-gray-200 font-bold mb-4 drop-shadow-lg">
             Welcome to LocalFix
           </h1>
-          <p className="text-2xl text-gray-100 font-light mb-8 drop-shadow-md">
+          <p className="text-xl lg:text-2xl text-gray-100 font-light mb-8 drop-shadow-md">
             Find trusted local services in your area
           </p>
           <Link
             to="/services"
-            className="text-sm md:text-base px-6 py-4 border rounded-md  text-white transition-all duration-300 hover:px-10 shadow-md"
+            className="text-sm  px-8 py-4 border rounded-xl text-gray-100 font-semibold transition-all duration-300 hover:px-10 bg-[#ff6b00] shadow-md"
           >
             Browse Services
           </Link>

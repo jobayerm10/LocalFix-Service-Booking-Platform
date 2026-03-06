@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-lg">
-      <div className="max-w-9xl mx-auto px-20 py-2 flex justify-between items-center">
+      <div className="max-w-9xl mx-auto px-4 lg:px-20 py-1 lg:py-2 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Link to="/" className="text-2xl font-bold text-blue-600">
             <img src={Logo} alt="LocalFix Logo" className="h-15 w-auto" />
