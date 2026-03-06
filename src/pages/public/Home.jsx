@@ -52,15 +52,15 @@ const Home = () => {
   }, []);
 
   return (
-    <div>
-      <section className="hero relative text-white overflow-hidden flex flex-col justify-center h-screen bg-[#9da7af]">
-        <section className="box  bg-[#a9b0ba] w-screen h-screen py-10 px-20 rounded-lg shadow-md flex flex-col justify-start items-start">
+    <div className="max-w-7xl mx-auto flex justify-between items-center">
+      <section className="hero relative  text-white overflow-hidden flex flex-col justify-center h-screen">
+        <section className="box w-screen h-screen py-10 px-5 lg:px-20 rounded-lg shadow-md flex flex-col justify-start items-start">
           <h1 className="text-3xl font-bold text-[#1E4376] mb-6">
             Find Local Services
           </h1>
           <div className="flex flex-col md:flex-row gap-4 mb-6">
             <select
-              className="px-4 py-3 rounded-md border border-gray-300 text-gray-700 bg-white w-full md:w-1/3"
+              className="px-4 py-2 rounded-md border border-gray-300 text-gray-700 bg-white w-full md:w-1/3"
               defaultValue=""
             >
               <option value="" disabled>
@@ -77,7 +77,7 @@ const Home = () => {
               placeholder="Enter Location"
               className="px-4 py-3 rounded-md border border-gray-300 text-gray-700 bg-white w-full md:w-1/3"
             />
-            <button className="px-6 py-3 bg-blue-600 text-white rounded-md font-semibold shadow-md hover:bg-blue-700 transition">
+            <button className="px-15 py-2 bg-blue-600 text-white rounded-md font-semibold shadow-md hover:bg-blue-700 transition">
               Search
             </button>
           </div>
@@ -91,15 +91,15 @@ const Home = () => {
                 <Link
                   key={i}
                   to={`/services?category=${category.name}`}
-                  className="relative h-48 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
+                  className="relative h-40 w-50 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow group"
                 >
                   <img
                     src={category.images[categoryImageIndices[i]]}
                     alt={category.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute bottom-0 bg-gray-500 hover:bg-blue-600 h-10 w-full transition-all flex items-center justify-center">
-                    <h3 className="text-xl mt-3 font-bold text-white">
+                  <div className="absolute bottom-0 bg-gray-500 hover:bg-blue-600 h-5 w-full transition-all flex items-center justify-center">
+                    <h3 className="text-sm font-semibold text-white">
                       {category.name}
                     </h3>
                   </div>
@@ -120,7 +120,7 @@ const Home = () => {
               />
             </div>
             {/* Example service cards, replace with dynamic if needed */}
-            <div className="flex items-center gap-4 border-b pb-4 mb-4">
+            <div className="flex items-center gap-4 border-b pb-4 mb-4 ">
               <img
                 src="https://randomuser.me/api/portraits/men/32.jpg"
                 alt="Profile"
@@ -128,7 +128,9 @@ const Home = () => {
               />
               <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-bold text-lg">Ahmed Rahman</span>
+                  <span className="font-bold text-lg  text-black">
+                    Ahmed Rahman
+                  </span>
                   <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">
                     Electrician
                   </span>
@@ -151,7 +153,9 @@ const Home = () => {
               />
               <div className="flex-1">
                 <div className="flex items-center gap-2">
-                  <span className="font-bold text-lg">Samir Islam</span>
+                  <span className="font-bold text-lg text-black">
+                    Samir Islam
+                  </span>
                   <span className="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs">
                     Plumber
                   </span>
