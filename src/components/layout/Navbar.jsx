@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div className="max-w-9xl mx-auto px-20 py-2 flex justify-between items-center">
         <div className="flex items-center gap-2">
           <Link to="/" className="text-2xl font-bold text-blue-600">
             <img src={Logo} alt="LocalFix Logo" className="h-15 w-auto" />
@@ -17,7 +17,7 @@ const Navbar = () => {
           </h3>
         </div>
 
-        <div className="hidden md:flex space-x-10">
+        <div className="hidden md:flex space-x-10 ">
           <Link
             to="/"
             className="text-gray-700 font-semibold hover:text-blue-600"

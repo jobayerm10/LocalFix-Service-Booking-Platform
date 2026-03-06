@@ -36,6 +36,48 @@ const Categories = [
     ],
     color: "from-orange-600",
   },
+  {
+    name: "Tutor",
+    images: [
+      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
+    ],
+    color: "from-orange-600",
+  },
+  {
+    name: "Dentists",
+    images: [
+      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
+    ],
+    color: "from-orange-600",
+  },
+  {
+    name: "Lawyer",
+    images: [
+      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
+    ],
+    color: "from-orange-600",
+  },
+  {
+    name: "Accountants",
+    images: [
+      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
+    ],
+    color: "from-orange-600",
+  },
+  {
+    name: "Hair stylists",
+    images: [
+      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
+    ],
+    color: "from-orange-600",
+  },
+  {
+    name: "Trainers",
+    images: [
+      "https://cdn.prod.website-files.com/6390e14cc734a931f8327343/679c741cfd2f81997c15fb20_Featured-image.jpg",
+    ],
+    color: "from-orange-600",
+  },
 ];
 
 const Home = () => {
@@ -57,18 +99,10 @@ const Home = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section
-        className="hero  relative text-white overflow-hidden flex flex-col justify-end min-h-screen group-hover:scale-105 transition-transform duration-500 "
-        style={{
-          backgroundImage: `url('${HERO_IMAGE}')`,
-          backgroundSize: "cover",
-          backgroundPosition: "top",
-          backgroundRepeat: "no-repeat",
-        }}
-      >
+      <section className="hero h-62.5 relative text-white overflow-hidden flex flex-col justify-center  bg-[#BFC9D1] min-h-screen">
         {/* Hero content positioned at bottom */}
-        <div className="relative max-w-7xl mx-auto px-4 text-center z-10 pb-30">
-          <h1 className="text-6xl font-bold mb-4 drop-shadow-lg">
+        <div className="relative max-w-7xl mx-auto px-4 text-center z-10 ">
+          <h1 className="text-6xl text-gray-700 font-bold mb-4 drop-shadow-lg">
             Welcome to LocalFix
           </h1>
           <p className="text-2xl mb-8 drop-shadow-md">
@@ -76,14 +110,15 @@ const Home = () => {
           </p>
           <Link
             to="/services"
-            className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+            className="text-sm md:text-base px-6 py-3 border rounded-md
+      bg-(--text-color) text-white transition-all duration-300
+      hover:px-10 shadow-md"
           >
             Browse Services
           </Link>
         </div>
       </section>
-
-      {/* Featured Services */}
+      {/* Featured Services
       <section className="max-w-7xl mx-auto px-4 py-12">
         <h2 className="text-3xl font-bold mb-8">Featured Services</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -95,12 +130,11 @@ const Home = () => {
             <p className="text-gray-500">No services available yet</p>
           )}
         </div>
-      </section>
-
+      </section> */}
       {/* Categories */}
       <section className="bg-gray-100 py-12">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-3xl font-bold mb-8">Popular Categories</h2>
+          <h2 className="text-3xl font-bold mb-8">Available Categories</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Map through categories and display each as an image card */}
             {Categories.map((category, i) => (
