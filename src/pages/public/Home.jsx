@@ -64,7 +64,7 @@ const Home = () => {
           <div className="right-content flex-1 w-full lg:max-w-xl">
             <div className='card bg-white rounded-3xl shadow-2xl p-6 mt-4  '>
               {/* Card Title */}
-              <h2 className='text-2xl font-black text-gray-900 mb-2'>Find a Service</h2>
+              <h2 className='text-2xl  font-semibold text-gray-900 mb-2'>Find a Service</h2>
               <p className='text-gray-400 text-sm mb-4'>Search by category, location or name</p>
 
               {/* Category Select */}

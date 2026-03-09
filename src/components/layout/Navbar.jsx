@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import Logo from "../../assets/logo/localfixlogo.png";
+import Logo from "../../assets/logo/logo1.png";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,9 +10,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 lg:px-10 py-3 flex justify-between items-center gap-8">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
-          <img src={Logo} alt="LocalFix Logo" className="h-12 w-auto" />
-          <h3 className="text-2xl font-bold text-[#1E4376]">
-            Local<span className="text-[#F27024]">Fix</span>
+          <img src={Logo} alt="LocalFix Logo" className="h-10 w-auto" />
+          <h3 className="text-2xl font-[font1] font-extrabold text-[#1B4FD8]">
+           LocalFix
           </h3>
         </Link>
 
@@ -48,7 +48,7 @@ const Navbar = () => {
         <div className="hidden md:flex items-center gap-4">
           <Link
             to="/login"
-            className="text-gray-500 font-medium hover:text-blue-600 transition"
+            className="text-gray-500 text-sm font-medium hover:text-blue-600 transition"
           >
             Sign In
           </Link>
