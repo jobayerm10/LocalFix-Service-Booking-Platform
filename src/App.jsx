@@ -16,7 +16,7 @@ function App() {
             <main className="grow">
               <AppRoutes />
             </main>
-            <Footer />
+            {/* <Footer /> */}
           </div>
         </BookingProvider>
       </AuthProvider>

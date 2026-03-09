@@ -6,38 +6,64 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-lg">
-      <div className="max-w-7xl mx-auto px-4 lg:px-20 py-1 lg:py-2 flex justify-between items-center">
-        <div className="flex items-center gap-2">
-          <Link to="/" className="text-2xl font-bold text-blue-600">
-            <img src={Logo} alt="LocalFix Logo" className="h-15 w-auto" />
-          </Link>
-          <h3 className="text-3xl font-bold text-[#1E4376]">
+    <nav className="bg-white shadow-md">
+      <div className="max-w-7xl mx-auto px-4 lg:px-20 py-3 flex justify-between items-center gap-8">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2 shrink-0">
+          <img src={Logo} alt="LocalFix Logo" className="h-12 w-auto" />
+          <h3 className="text-2xl font-bold text-[#1E4376]">
             Local<span className="text-[#F27024]">Fix</span>
           </h3>
-        </div>
+        </Link>
 
-        <div className="hidden md:flex space-x-10 ">
+        {/* Desktop Navigation */}
+        <ul className="hidden md:flex space-x-8 items-center justify-center flex-1 shrink-0">
           <Link
             to="/"
-            className="text-gray-700 font-semibold hover:text-blue-600"
+            className="text-gray-500 font-medium hover:text-blue-600 transition"
           >
             Home
           </Link>
           <Link
-            to="/services"
-            className="text-gray-700 font-semibold  hover:text-blue-600"
+            to="/bookings"
+            className="text-gray-500 font-medium hover:text-blue-600 transition"
           >
-            Services
+            Bookings
           </Link>
           <Link
-            to="/login"
-            className="text-gray-700 font-semibold hover:text-blue-600"
+            to="/profile"
+            className="text-gray-500 font-medium hover:text-blue-600 transition"
           >
-            Login
+            My Profile
           </Link>
+          <Link
+            to="/help"
+            className="text-gray-500 font-medium hover:text-blue-600 transition"
+          >
+            Help
+          </Link>
+        </ul>
+
+        {/* Right Section */}
+        <div className="hidden md:flex items-center gap-4">
+          <Link
+            to="/login"
+            className="text-gray-500 font-medium hover:text-blue-600 transition"
+          >
+            Sign In
+          </Link>
+          <Link
+            to="/post-job"
+            className="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition"
+          >
+            Post a Job
+          </Link>
+          <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-semibold cursor-pointer hover:bg-blue-700 transition">
+            JH
+          </div>
         </div>
 
+        {/* Mobile Menu Button */}
         <button
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           className="md:hidden text-3xl text-gray-700"
@@ -46,26 +72,47 @@ const Navbar = () => {
         </button>
       </div>
 
+      {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden bg-white border-t">
-          <Link
-            to="/"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            Home
-          </Link>
-          <Link
-            to="/services"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            Services
-          </Link>
-          <Link
-            to="/login"
-            className="block px-4 py-2 text-gray-700 hover:bg-gray-100"
-          >
-            Login
-          </Link>
+          <ul className="flex flex-col">
+            <Link
+              to="/"
+              className="block px-4 py-3 text-gray-700 hover:bg-gray-100 font-medium border-b"
+            >
+              Home
+            </Link>
+            <Link
+              to="/bookings"
+              className="block px-4 py-3 text-gray-700 hover:bg-gray-100 font-medium border-b"
+            >
+              Bookings
+            </Link>
+            <Link
+              to="/profile"
+              className="block px-4 py-3 text-gray-700 hover:bg-gray-100 font-medium border-b"
+            >
+              My Profile
+            </Link>
+            <Link
+              to="/help"
+              className="block px-4 py-3 text-gray-700 hover:bg-gray-100 font-medium border-b"
+            >
+              Help
+            </Link>
+            <Link
+              to="/login"
+              className="block px-4 py-3 text-gray-700 hover:bg-gray-100 font-medium border-b"
+            >
+              Sign In
+            </Link>
+            <Link
+              to="/post-job"
+              className="block px-4 py-3 bg-blue-600 text-white font-medium hover:bg-blue-700"
+            >
+              Post a Job
+            </Link>
+          </ul>
         </div>
       )}
     </nav>
