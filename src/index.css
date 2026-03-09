@@ -1,5 +1,10 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: font1;
+  src: url(assets/fonts/Orbitron-VariableFont_wght.ttf);
+}
+
 /* Hide scrollbars for all browsers */
 html,
 body {

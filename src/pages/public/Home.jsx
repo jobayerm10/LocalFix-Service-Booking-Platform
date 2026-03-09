@@ -20,7 +20,7 @@ const Home = () => {
       <div className="absolute top-[10%] right-0 h-[370px] w-[370px] bg-white rounded-full opacity-5"></div>
       <div className="absolute top-[60%] left-[30%] h-[370px] w-[370px] bg-white rounded-full opacity-5"></div>
 
-      <div className="max-w-7xl mx-auto px-4 lg:px-20 py-5 h-full">
+      <div className="max-w-7xl mx-auto px-4 lg:px-10 py-5 h-full">
         <div className="hero-content flex flex-col lg:flex-row items-center justify-between gap-2 min-h-[70vh]">
           
           {/* Left Content */}
@@ -32,36 +32,36 @@ const Home = () => {
             </div>
 
             {/* Heading */}
-            <h1 className="text-5xl lg:text-6xl font-black mb-2 leading-tight">
+            <h1 className="text-xl font-[font1] lg:text-6xl font-black mb-2 leading-tight">
               Find Trusted<br />Local Services<span className="text-yellow-400">.</span>
             </h1>
 
             {/* Description */}
-            <p className="text-lg text-blue-100 mb-12 leading-relaxed max-w-lg">
+            <p className="text-md text-gray-200 mb-2 leading-relaxed max-w-lg">
               Connect instantly with skilled electricians, plumbers, tutors, cleaners and more — vetted professionals ready to help.
             </p>
 
             {/* Stats */}
             <div className='reviews flex gap-12 sm:gap-8'>
               <div>
-                <p className='text-4xl sm:text-3xl font-black text-white'>4.9<span className='text-yellow-400 ml-1'>★</span></p>
-                <p className='text-blue-100 text-sm font-semibold uppercase tracking-wide'>AVG RATING</p>
+                <p className='text-4xl sm:text-3xl font-[font1] font-bold text-white'>4.9<span className='text-yellow-400 ml-1'>★</span></p>
+                <p className='text-blue-100 text-sm font-semibold  uppercase tracking-wide'>AVG RATING</p>
               </div>
               <div className='border-l border-white/30'></div>
               <div>
-                <p className='text-4xl sm:text-3xl font-black text-white'>12K+</p>
-                <p className='text-blue-100 text-sm font-semibold uppercase tracking-wide'>JOBS DONE</p>
+                <p className='text-4xl sm:text-3xl font-[font1] font-bold text-white'>12K+</p>
+                <p className='text-blue-100 text-sm font-semibold  uppercase tracking-wide'>JOBS DONE</p>
               </div>
               <div className='border-l border-white/30'></div>
               <div>
-                <p className='text-4xl sm:text-3xl font-black text-white'>30 min</p>
+                <p className='text-4xl sm:text-3xl font-[font1] font-bold text-white'>30 min</p>
                 <p className='text-blue-100 text-sm font-semibold uppercase tracking-wide'>AVG RESPONSE</p>
               </div>
             </div>
           </div>
 
           {/* Right Content - Search Card */}
-          <div className="right-content flex-1 w-full lg:max-w-lg">
+          <div className="right-content flex-1 w-full lg:max-w-xl">
             <div className='card bg-white rounded-3xl shadow-2xl p-6 mt-4  '>
               {/* Card Title */}
               <h2 className='text-2xl font-black text-gray-900 mb-2'>Find a Service</h2>
@@ -114,7 +114,7 @@ const Home = () => {
               </div>
 
               {/* Search Button */}
-              <button className='w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 rounded-lg transition-all transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg mb-6'>
+              <button className='w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 rounded-lg transition-all transform hover:scale-101 flex items-center justify-center gap-2 shadow-lg mb-6 cursor-pointer'>
                 <span>🔍</span>
                 Search Available Pros
               </button>
