@@ -15,24 +15,24 @@ const Home = () => {
   ]
 
   return (
-    <div className='bg-gradient-to-b from-[#2563EB] to-[#1E40AF] min-h-screen w-full relative overflow-hidden'>
+    <div className='bg-gradient-to-b from-[#2563EB] to-[#1E40AF] h-[80vh] w-full relative overflow-hidden'>
       {/* Decorative circles */}
       <div className="absolute top-[10%] right-0 h-[370px] w-[370px] bg-white rounded-full opacity-5"></div>
       <div className="absolute top-[60%] left-[30%] h-[370px] w-[370px] bg-white rounded-full opacity-5"></div>
 
-      <div className="max-w-7xl mx-auto px-4 lg:px-20 py-16 h-full">
-        <div className="hero-content flex flex-col lg:flex-row items-center justify-between gap-12 min-h-[70vh]">
+      <div className="max-w-7xl mx-auto px-4 lg:px-20 py-5 h-full">
+        <div className="hero-content flex flex-col lg:flex-row items-center justify-between gap-2 min-h-[70vh]">
           
           {/* Left Content */}
           <div className="left-content flex-1 text-white">
             {/* Badge */}
-            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur px-4 py-2 rounded-full mb-8">
+            <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur px-4 py-2 rounded-full mb-2">
               <span className="text-red-400 text-lg">📍</span>
               <p className="text-white font-semibold">2,400+ verified pros in Dhaka</p>
             </div>
 
             {/* Heading */}
-            <h1 className="text-5xl lg:text-6xl font-black mb-8 leading-tight">
+            <h1 className="text-5xl lg:text-6xl font-black mb-2 leading-tight">
               Find Trusted<br />Local Services<span className="text-yellow-400">.</span>
             </h1>
 
@@ -61,11 +61,11 @@ const Home = () => {
           </div>
 
           {/* Right Content - Search Card */}
-          <div className="right-content flex-1 w-full lg:max-w-md">
-            <div className='bg-white rounded-3xl shadow-2xl p-8'>
+          <div className="right-content flex-1 w-full lg:max-w-lg">
+            <div className='card bg-white rounded-3xl shadow-2xl p-6 mt-4  '>
               {/* Card Title */}
-              <h2 className='text-3xl font-black text-gray-900 mb-2'>Find a Service</h2>
-              <p className='text-gray-400 text-base mb-6'>Search by category, location or name</p>
+              <h2 className='text-2xl font-black text-gray-900 mb-2'>Find a Service</h2>
+              <p className='text-gray-400 text-sm mb-4'>Search by category, location or name</p>
 
               {/* Category Select */}
               <div className='mb-6'>
