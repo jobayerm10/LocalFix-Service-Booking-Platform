@@ -7,10 +7,11 @@
 **Connect instantly with trusted local service professionals.**  
 Find electricians, plumbers, tutors, cleaners and more — vetted pros ready to help.
 
-
-
-
-<img width="1918" height="1067" alt="image" src="https://github.com/user-attachments/assets/08fbee7c-c3c8-41af-afc0-a7f672abad22" />
+<div align="center">
+<kbd>
+<img width="1918" alt="LocalFix Screenshot" src="https://github.com/user-attachments/assets/08fbee7c-c3c8-41af-afc0-a7f672abad22" />
+</kbd>
+</div>
 
 
 </div>
