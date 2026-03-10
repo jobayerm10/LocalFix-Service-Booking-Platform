@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="public/logo.svg" alt="LocalFix Logo" width="200"/>
+
 
 # 🔧 LocalFix — Service Booking Platform
 
