@@ -4,6 +4,10 @@
   font-family: font1;
   src: url(assets/fonts/Orbitron-VariableFont_wght.ttf);
 }
+@font-face {
+  font-family: font2;
+  src: url(assets/fonts/Montserrat-VariableFont_wght.ttf);
+}
 
 /* Hide scrollbars for all browsers */
 html,

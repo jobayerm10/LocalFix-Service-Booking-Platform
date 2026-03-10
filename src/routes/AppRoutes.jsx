@@ -4,7 +4,7 @@ import PrivateRoute from './PrivateRoute';
 
 // Public Pages
 import Home from '../pages/public/Home';
-import Services from '../pages/public/Services';
+// import Services from '../pages/public/Services';
 import ServiceDetails from '../pages/public/ServiceDetails';
 import ProviderProfile from '../pages/public/ProviderProfile';
 
@@ -32,7 +32,7 @@ const AppRoutes = () => {
     <Routes>
       {/* Public Routes */}
       <Route path="/" element={<Home />} />
-      <Route path="/services" element={<Services />} />
+      {/* <Route path="/services" element={<Services />} /> */}
       <Route path="/service-details/:id" element={<ServiceDetails />} />
       <Route path="/provider-profile/:id" element={<ProviderProfile />} />
       

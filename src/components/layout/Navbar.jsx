@@ -11,7 +11,7 @@ const Navbar = () => {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img src={Logo} alt="LocalFix Logo" className="h-10 w-auto" />
-          <h3 className="text-2xl font-[font1] font-extrabold text-[#1B4FD8]">
+          <h3 className="text-xl font-[font1]  font-extrabold text-[#1B4FD8]">
            LocalFix
           </h3>
         </Link>

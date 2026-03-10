@@ -5,6 +5,7 @@ import { BookingProvider } from "./context/BookingContext";
 import Navbar from "./components/layout/Navbar";
 import Footer from "./components/layout/Footer";
 import AppRoutes from "./routes/AppRoutes";
+import Categories from "./pages/public/Categories";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
             <main className="grow">
               <AppRoutes />
             </main>
+            <Categories/>
             {/* <Footer /> */}
           </div>
         </BookingProvider>

@@ -15,10 +15,10 @@ const Home = () => {
   ]
 
   return (
-    <div className='bg-gradient-to-b from-[#2563EB] to-[#1E40AF] h-[80vh] w-full relative overflow-hidden'>
+    <div className='bg-linear-to-b from-[#2563EB] to-[#1E40AF] h-[80vh] w-full relative overflow-hidden'>
       {/* Decorative circles */}
-      <div className="absolute top-[10%] right-0 h-[370px] w-[370px] bg-white rounded-full opacity-5"></div>
-      <div className="absolute top-[60%] left-[30%] h-[370px] w-[370px] bg-white rounded-full opacity-5"></div>
+      <div className="absolute top-[10%] right-0 h-92.5 w-92.5 bg-white rounded-full opacity-5"></div>
+      <div className="absolute top-[60%] left-[30%] h-92.5 w-92.5 bg-white rounded-full opacity-5"></div>
 
       <div className="max-w-7xl mx-auto px-4 lg:px-10 py-5 h-full">
         <div className="hero-content flex flex-col lg:flex-row items-center justify-between gap-2 min-h-[70vh]">
@@ -64,8 +64,8 @@ const Home = () => {
           <div className="right-content flex-1 w-full lg:max-w-xl">
             <div className='card bg-white rounded-3xl shadow-2xl p-6 mt-4  '>
               {/* Card Title */}
-              <h2 className='text-2xl  font-semibold text-gray-900 mb-2'>Find a Service</h2>
-              <p className='text-gray-400 text-sm mb-4'>Search by category, location or name</p>
+              <h2 className='text-2xl font-[font2]  font-medium text-gray-800 mb-2'>Find a Service</h2>
+              <p className='text-gray-500 text-sm mb-4'>Search by category, location or name</p>
 
               {/* Category Select */}
               <div className='mb-6'>
@@ -114,7 +114,7 @@ const Home = () => {
               </div>
 
               {/* Search Button */}
-              <button className='w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 rounded-lg transition-all transform hover:scale-101 flex items-center justify-center gap-2 shadow-lg mb-6 cursor-pointer'>
+              <button className='w-full bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-3 rounded-lg transition-all transform hover:scale-101 flex items-center justify-center gap-2 shadow-lg mb-6 cursor-pointer'>
                 <span>🔍</span>
                 Search Available Pros
               </button>
