@@ -6,8 +6,8 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <nav className="bg-white shadow-md">
-      <div className="max-w-7xl mx-auto px-4 lg:px-10 py-3 flex justify-between items-center gap-8">
+    <nav className="bg-white shadow-md fixed w-full z-50">
+      <div className="max-w-7xl mx-auto px-4 lg:px-10 py-3 flex justify-between items-center gap-8 ">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 shrink-0">
           <img src={Logo} alt="LocalFix Logo" className="h-10 w-auto" />

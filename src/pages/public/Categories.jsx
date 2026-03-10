@@ -12,11 +12,11 @@ const Categories = () => {
   ]
 
   return (
-    <div className='bg-gray-50 py-16'>
-      <div className='max-w-7xl mx-auto px-4 lg:px-20'>
+    <div className='bg-gray-50 py-12 '>
+      <div className='max-w-7xl mx-auto px-4 lg:px-10 mt-15'>
         {/* Header */}
-        <div className='flex justify-between items-center mb-12'>
-          <h2 className='text-4xl font-[font2] font-semibold text-[#0F172A]'>Browse Categories</h2>
+        <div className='flex justify-between items-center mb-7'>
+          <h2 className='text-2xl font-[font2] font-semibold text-[#0F172A]'>Browse Categories</h2>
           <Link to='/services' className='text-blue-600 font-semibold hover:text-blue-700 transition'>
             View all categories →
           </Link>

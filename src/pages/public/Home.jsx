@@ -15,7 +15,7 @@ const Home = () => {
   ]
 
   return (
-    <div className='bg-linear-to-b from-[#2563EB] to-[#1E40AF] h-[80vh] w-full relative overflow-hidden'>
+    <div className='bg-linear-to-b from-[#2563EB] to-[#1E40AF] top-[7vh] w-full relative overflow-hidden'>
       {/* Decorative circles */}
       <div className="absolute top-[10%] right-0 h-92.5 w-92.5 bg-white rounded-full opacity-5"></div>
       <div className="absolute top-[60%] left-[30%] h-92.5 w-92.5 bg-white rounded-full opacity-5"></div>
