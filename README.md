@@ -7,13 +7,8 @@
 **Connect instantly with trusted local service professionals.**  
 Find electricians, plumbers, tutors, cleaners and more — vetted pros ready to help.
 
-[![React](https://img.shields.io/badge/React-18-61DAFB?style=flat-square&logo=react&logoColor=white)](https://react.dev/)
-[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-3-38BDF8?style=flat-square&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Firebase](https://img.shields.io/badge/Firebase-Enabled-FFCA28?style=flat-square&logo=firebase&logoColor=black)](https://firebase.google.com/)
-[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=flat-square)]()
 
-[🌐 Live Demo](#) · [🐛 Report Bug](issues) · [✨ Request Feature](issues)
+
 
 <img width="1918" height="1067" alt="image" src="https://github.com/user-attachments/assets/08fbee7c-c3c8-41af-afc0-a7f672abad22" />
 
@@ -72,8 +67,8 @@ Built with a modern React frontend and Firebase backend, LocalFix supports three
 
 | Layer | Technology |
 |-------|------------|
-| **Frontend** | React 18, React Router v6 |
-| **Styling** | Tailwind CSS 3 |
+| **Frontend** | React , React Router |
+| **Styling** | Tailwind CSS |
 | **Backend / DB** | Firebase (Firestore, Auth, Storage) |
 | **State Management** | React Context API |
 | **Build Tool** | Vite |
@@ -156,35 +151,8 @@ Make sure you have the following installed:
 
 5. Open [http://localhost:5173](http://localhost:5173) in your browser 🎉
 
----
 
-## 🔐 Environment Variables
 
-Create a `.env.local` file in the root of your project and add your Firebase config:
-
-```env
-VITE_FIREBASE_API_KEY=your_api_key
-VITE_FIREBASE_AUTH_DOMAIN=your_project.firebaseapp.com
-VITE_FIREBASE_PROJECT_ID=your_project_id
-VITE_FIREBASE_STORAGE_BUCKET=your_project.appspot.com
-VITE_FIREBASE_MESSAGING_SENDER_ID=your_sender_id
-VITE_FIREBASE_APP_ID=your_app_id
-```
-
-> ⚠️ **Never commit `.env.local` to version control.** It's already included in `.gitignore`.
-
----
-
-## 💻 Usage
-
-| Command | Description |
-|---------|-------------|
-| `npm run dev` | Start local development server |
-| `npm run build` | Build for production |
-| `npm run preview` | Preview production build locally |
-| `npm run lint` | Run ESLint |
-
----
 
 ## 🗺️ Roadmap
 
@@ -200,49 +168,5 @@ VITE_FIREBASE_APP_ID=your_app_id
 - [ ] Mobile app (React Native)
 - [ ] Map view for nearby providers
 
----
 
-## 🤝 Contributing
 
-Contributions are welcome! Here's how to get started:
-
-1. Fork the project
-2. Create your feature branch
-   ```bash
-   git checkout -b feature/AmazingFeature
-   ```
-3. Commit your changes
-   ```bash
-   git commit -m 'Add some AmazingFeature'
-   ```
-4. Push to the branch
-   ```bash
-   git push origin feature/AmazingFeature
-   ```
-5. Open a Pull Request
-
-Please make sure your code follows the existing style and passes linting before submitting.
-
----
-
-## 📄 License
-
-Distributed under the MIT License. See [`LICENSE`](LICENSE) for more information.
-
----
-
-## 📬 Contact
-
-**Your Name** — [@yourtwitter](https://twitter.com/yourtwitter) — youremail@example.com
-
-**Project Link:** [https://github.com/your-username/LocalFix-Service-Booking-Platform](https://github.com/your-username/LocalFix-Service-Booking-Platform)
-
----
-
-<div align="center">
-
-Made with ❤️ in Dhaka, Bangladesh
-
-⭐ If you found this project helpful, please give it a star!
-
-</div>
